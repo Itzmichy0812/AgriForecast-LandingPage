@@ -1,0 +1,6 @@
+{
+  "name": "AgriForecast - Hệ Thống Dự Báo & Nhập Hàng Thông Minh",
+  "description": "Phần mềm thông minh dự báo nhu cầu và hỗ trợ quyết định nhập hàng cho đại lý vật tư nông nghiệp dựa trên thời tiết 14 ngày và mùa vụ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

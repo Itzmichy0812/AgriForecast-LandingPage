@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #FBFBF9;
+    color: #1C201D;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.028em;
+  }
+}
+
+/* Ambient glow mesh layers */
+.ambient-glow-forest {
+  background: radial-gradient(circle at 50% 50%, rgba(26, 62, 38, 0.08) 0%, rgba(26, 62, 38, 0) 70%);
+  filter: blur(60px);
+}
+
+.ambient-glow-terracotta {
+  background: radial-gradient(circle at 50% 50%, rgba(217, 91, 30, 0.07) 0%, rgba(217, 91, 30, 0) 70%);
+  filter: blur(60px);
+}
+
+/* Linear-style bento card hover elevation */
+.saas-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(229, 231, 235, 0.85);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 4px 12px -2px rgba(26, 62, 38, 0.03);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.28s ease;
+}
+
+.saas-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(26, 62, 38, 0.28);
+  box-shadow: 0 12px 28px -6px rgba(26, 62, 38, 0.09), 0 2px 6px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* Floating animation for subtle parallax badges */
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-soft-float {
+  animation: soft-float 4s ease-in-out infinite;
+}
+
+/* Interactive slider thumb styling */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1A3E26;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(26, 62, 38, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #122D1B;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1A3E26;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(26, 62, 38, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
